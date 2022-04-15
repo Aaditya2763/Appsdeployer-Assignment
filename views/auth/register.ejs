@@ -1,0 +1,35 @@
+<% layout('layout/boilerplate') -%>
+
+
+
+<div class="border p-3 mx-auto w-50 my-3">
+    <%- include("../partials/flash") %> 
+    <h1>Sign Up</h1>
+    <form action="/auth/register" method="post">
+        <div class="mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" type="text" name="username" id="username" required>
+        </div>
+        <div class="mb-3">
+        <label class="form-label" for="firstName">First Name</label>
+        <input class="form-control" type="text" name="firstName" id="firstName" required>
+    </div>
+    <div class="mb-3">
+    <label class="form-label" for="lastName">Last Name</label>
+    <input class="form-control" type="text" name="lastName" id="lastName" required>
+    </div>  
+        <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="phone_no">phone_no</label>
+            <input class="form-control" type="number" name="phone_no" id="phone_no" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" required>
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">SignUp</button>
+    </form>
+</div

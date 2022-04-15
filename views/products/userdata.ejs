@@ -1,0 +1,32 @@
+<% layout('layout/boilerplate') -%>
+
+
+
+<div class="border p-3 mx-auto w-50 my-5">
+    
+    <h1>User Profile</h1>
+    <%- include("../partials/flash") %> 
+    <form action="/user/profile/<%=currentUser.id%>?_method=PATCH" method="post">
+        <div class="mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" id="disabledInput" type="text" name="username" id="username" value="<%=user.username%>" disabled>
+        </div>
+        <div class="mb-3">
+        <label class="form-label" for="firstName">First Name</label>
+        <input class="form-control" type="text" name="firstName" id="firstName" value="<%=user.firstName%>">
+    </div>
+    <div class="mb-3">
+    <label class="form-label" for="lastName">Last Name</label>
+    <input class="form-control" type="text" name="lastName" id="lastName"value="<%=user.lastName%>">
+    </div>  
+        <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email"value="<%=user.email%>">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="phone_no">Phone_no</label>
+            <input class="form-control" type="number" name="phone_no" id="phone_no" value="<%=user.phone_no%>">
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Update Profile</button>
+    </form>
+</div>
